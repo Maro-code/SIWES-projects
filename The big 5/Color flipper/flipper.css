@@ -1,0 +1,36 @@
+button{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 100px;
+    border: 5px solid;
+}
+#red{
+    border-color: red;
+}
+#green{
+    border-color: green;
+}
+#blue{
+    border-color: blue;
+}
+#rand{
+    animation-name: rand;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes rand{
+    0% {border-color: rgb(255, 0, 0);}
+    10% {border-color: rgb(0, 128, 0);}
+    20% {border-color: rgb(0, 0, 255);}
+    30% {border-color: rgb(221, 255, 0);}
+    40% {border-color: rgb(0, 242, 255);}
+    50% {border-color: rgb(243, 255, 168);}
+    60% {border-color: rgb(255, 0, 174);}
+    70% {border-color: rgb(0, 0, 0);}
+    80% {border-color: rgb(156, 143, 127);}
+    90% {border-color: rgb(217, 214, 221);}
+    100% {border-color: rgb(115, 28, 79);}
+}

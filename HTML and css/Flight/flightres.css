@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+/* Navbar Styles */
+.navbar{
+    background-image: linear-gradient(to left,red,purple);
+    overflow: hidden;
+}
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbar li{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    height: 60px;
+}
+/* Mid Section Styles */
+#mid {
+    text-align: center;
+    margin-top: 50px;
+}
+form{
+    line-height: 50px;
+}
+input[type="submit"] {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+select{
+    width: 200px;
+    height: 40px;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: lightgrey;
+    flex-wrap: wrap;
+}
+footer section{
+    flex-basis: 30%;
+    text-align: center;
+}
+.imgs{
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+}
+h1{
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar li {
+        padding: 10px;
+    }
+    .logo {
+        width: 80px;
+        height: auto;
+    }
+    select {
+        width: 100%;
+    }
+    footer section {
+        flex-basis: 100%; /* Each section takes up full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}

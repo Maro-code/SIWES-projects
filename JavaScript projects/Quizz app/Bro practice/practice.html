@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="practice.css" rel="stylesheet">
+</head>
+<body>
+    <div class="circumference">
+        <h1>Find the circumference of a circle</h1>
+        <label for="radius">Enter circle radius:</p>
+        <input type="number" name="radius" id="radius">
+        <button id="submit" onclick="getRadius()">submit</button>
+    </div>
+    <!--Number manipulation-->
+    <div class="container">
+        <span id="target">0</span>
+        <div class="btns">
+            <button id="decrease" onclick="decrease()">decrease</button>
+            <button id="reset" onclick="startOver()">reset</button>
+            <button id="increase" onclick="increase()">increase</button>
+        </div>
+    </div>
+    <!--Ludo simulation-->
+    <div class="container">
+        <span id="res">0</span>
+        <div class="btns">
+            <div id="first"></div>
+            <button id="roll" onclick="roll()">ROLL</button>
+            <div id="second"></div>
+        </div>
+    </div>
+    <!--Number guessing game-->
+    <div class="container">
+        <label for="guess">What number am i thinking of?</label>
+        <div class="response">
+            <input type="number" id="guess">
+            <button id="submit" onclick="guess()">guess</button>
+        </div>
+    </div>
+    <!--Temperature conversion program-->
+    <div class="temperature container">
+        <input type="number" id="temp">
+        <div class="sec">
+            <input type="radio" id="converToFar" name="unit">
+            <label for="converToFar">Celcius to fahrenheit</label>
+            <input type="radio" id="converToCel" name="unit">
+            <label for="converToCel">Fahrenheit to celsius</label>
+        </div>
+        <input type="text" id="result" readonly>
+        <button onclick="getTemp()">Submit</button>
+    </div>
+</body>
+<script src="practice.js"></script>
+</html>

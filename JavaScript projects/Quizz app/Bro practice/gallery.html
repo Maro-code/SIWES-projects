@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive content Gallery</title>
+    <link href="gallery.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0f24fb0455.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Content Gallery</h1>
+        <div class="picture-container">
+            <div class="tooltip"><img src="https://i.pinimg.com/564x/bb/85/99/bb85996c7e688245380a5ea034680c77.jpg" alt="image 1" class="img" onclick="show()">
+                <span class="tooltiptext">Click me</span>
+            </div>
+            <img src="https://i.pinimg.com/564x/f5/8f/4d/f58f4dff58e75a9999463b46722f0e68.jpg" alt="image 2" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/36/1a/15/361a15799024e6e6436a97a03f020a48.jpg" alt="image 3" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/f7/87/c3/f787c3a71d109d5d1790fd6e2f14c4a2.jpg" alt="image 4" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/bd/15/9e/bd159e0b60b983c0901b80e6728f73cc.jpg" alt="image 6" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/78/da/01/78da01d06bdf1efd492776190eec5c18.jpg" alt="image 7" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/cf/e2/41/cfe24160bda2e7084b59c3956da60694.jpg" alt="image 8" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/ef/5d/97/ef5d97e2654e8834858654b3aeff7ea4.jpg" alt="image 9" class="img" onclick="show()">
+            <img src="https://i.pinimg.com/564x/6f/44/25/6f442536e990b7b2c68cd617c9310ff0.jpg" alt="image 9" class="img" onclick="show()">
+        </div>
+    </div>
+    <div id="dispcont">
+        <div id="image-display">
+            <img src="https://i.pinimg.com/564x/f5/8f/4d/f58f4dff58e75a9999463b46722f0e68.jpg" alt="popup" class="popup-img">
+        </div>
+        <button id = "close"  onclick="cancel()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</body>
+<script src="gallery.js"></script>
+</html>

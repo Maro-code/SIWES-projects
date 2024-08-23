@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+#logo{
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+.btn1{
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    height: fit-content;
+    align-self: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12%;
+    background-color: #122D78;
+    height: 120px;
+}
+main #first{
+    background-color: #122D78;
+    display: flex;
+    padding: 0px 15%;
+}
+.first1{
+    color: white;
+    align-self: center;
+    text-align: left;
+    width: fit-content;
+}
+.first1 h2{
+    padding: 0 50px 0 0;
+    margin: 10px 0;
+}
+.first1 p{
+    padding: 0 250px 0 0;
+    margin: 10px 0;
+}
+#edit{
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+.btn2{
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    height: fit-content;
+    margin: 15px 0;
+}
+main #second{
+    display: flex;
+    padding: 20px 15%;
+    align-items: center;
+}
+main #second h2{
+    color: rgb(20, 20, 231);
+    margin: 10px 0;
+}
+.second1 p{
+    margin: 10px 0;
+    color: gray;
+}
+
+#inner-div{
+    margin: 10px 20px;
+    display: grid;
+    width: 460px;
+    height: 460px;
+    grid-template-rows: repeat(2, 225px);
+    grid-template-columns: repeat(2, 225px);
+    gap: 10px;
+}
+#inner-div .inner-one{
+    background-color: #F2F6FF;
+    color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#inner-div .inner-two{
+    background-color: #FFF2F0;
+    color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#inner-div .inner-three{
+    background-color: #FFFAE7;
+    color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#inner-div .inner-four{
+    background-color: #F6FFEC;
+    color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+#inner-div .inner-one h4,p,
+#inner-div .inner-two h4,p,
+#inner-div .inner-three h4,p,
+#inner-div .inner-four h4,p {
+    margin: 10px;
+}
+#inner-div .inner-one:hover,
+#inner-div .inner-two:hover,
+#inner-div .inner-three:hover,
+#inner-div .inner-four:hover{
+    background-color: #122D78;
+    color: white;
+}
+
