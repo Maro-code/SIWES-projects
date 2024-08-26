@@ -1,7 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 /* Navbar Styles */
 .navbar{
     background-image: linear-gradient(to left,red,purple);
@@ -30,6 +39,7 @@ body{
 #mid {
     text-align: center;
     margin-top: 50px;
+    flex: 1;
 }
 form{
     line-height: 50px;
@@ -64,24 +74,64 @@ footer section{
 h1{
     font-size: 3rem;
 }
+#hamburger{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.058);
+    backdrop-filter: blur(50px);
+    font-size: 1.2rem;
+}
+#hamburger ul{
+    list-style-type: none;
+}
+.mins{
+    padding: 10px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.mins li{
+    padding: 5px 0;
+}
+.mins li:hover{
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    border: 0.5px solid #b9b9b9;
+}
+.logs{
+    margin-top: 10px;
+}
+.logs button{
+    margin: 5px;
+}
+#close{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navbar li {
-        padding: 10px;
+    .navbar{
+       display: none;
     }
     .logo {
-        width: 80px;
+        width: 60px;
         height: auto;
+    }
+    #close{
+        top: 20px;
     }
     select {
         width: 100%;
     }
     footer section {
-        flex-basis: 100%; /* Each section takes up full width on smaller screens */
+        flex-basis: 100%;
         margin-bottom: 20px;
     }
 }
