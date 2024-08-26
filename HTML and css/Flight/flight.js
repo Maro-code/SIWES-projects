@@ -1,5 +1,4 @@
-function close(){
-    let close = document.getElementById("close");
+function close() {
     let sidebar = document.getElementById("hamburger");
     sidebar.style.display = "none";
-}
+  }

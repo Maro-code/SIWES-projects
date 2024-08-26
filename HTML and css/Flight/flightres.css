@@ -115,6 +115,9 @@ h1{
     right: 10px;
     font-size: 20px;
 }
+#close:hover{
+    background-color: #5e5e5e;
+}
 
 @media screen and (max-width: 768px) {
     .navbar{
