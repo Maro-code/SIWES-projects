@@ -19,10 +19,11 @@ main{
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    width: fit-content;
 }
 .head{
-    padding: 8px 20px;
-    width: 80%;
+    padding: 8px;
+    width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
     background-color: #333333;
@@ -45,19 +46,20 @@ main{
     margin: 0;
 }
 .speech p{
-    width: 60rem;
+    width: 50rem;
     margin-top: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 25px;
 }
 .container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 15px;
+    margin-top: 10px;
     border: 2px solid white;
-    padding: 10px 0;
-    background-color: #f4f4ff;
+    padding: 18px 0;
+    background-color: #f4f4ff77;
     border: 2px solid #B8B7FF;
     border-radius: 2px;
 }
@@ -100,9 +102,11 @@ textarea{
     border: 2px solid #b4b4b4;
     border-radius: 5px;
     resize: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     padding: 10px;
+    width: 400px;
+    height: 210px;
 }
 .email, .phone{
     margin: 0 40px;
@@ -121,4 +125,65 @@ textarea{
 .email button:hover{
     background-color: #fafafa;
     border: 1px solid #9f9dff;
+}
+.bar{
+    background-color: #B8B7FF;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    margin-left: 10px;
+}
+#sidebar{
+    padding: 10px 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.line{
+    width: 0px;
+    height: 30px;
+    border: 2px solid black;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 200px;
+}
+.option a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 5px;
+    text-align: center;
+}
+.icon-op{
+    padding: 8px;
+    color: #fafafa;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+.profile {
+    mask-image: linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0) );
+}
+
+#profile{
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
 }
