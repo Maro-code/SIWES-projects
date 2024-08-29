@@ -17,11 +17,11 @@ html{
 main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
 }
 .head{
-    padding: 15px 20px;
+    padding: 8px 20px;
     width: 80%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
@@ -30,23 +30,46 @@ main{
 .head h1{
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: #ffffff;
+}
+.speech{
+    width: fit-content;
+    margin-top: 15px;
+    color: #f6f6f6;
+}
+.speech h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+.speech p{
+    width: 60rem;
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 25px;
 }
 .container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 15px;
     border: 2px solid white;
+    padding: 10px 0;
+    background-color: #f4f4ff;
+    border: 2px solid #B8B7FF;
+    border-radius: 2px;
 }
 .phone, .intro{
     display: flex;
-    align-items: center;
+    align-items: top;
+    color: #333333;
 }
 .icon{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-right: 20px;
+    color: #333333;
 }
 .intro .icon{
     font-size: 3rem;
@@ -58,12 +81,15 @@ main{
     align-items: flex-start;
 }
 .info h2{
+    font-size: 1.2rem;
     font-weight: 500;
+    margin: 0;
 }
 .info p{
     width: 400px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
+    margin-top: 5px;
 }
 .email{
     display: flex;
@@ -79,5 +105,20 @@ textarea{
     padding: 10px;
 }
 .email, .phone{
-    margin: 0 50px;
+    margin: 0 40px;
+}
+.email button{
+    background-color: #9f9dff;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius:5px;
+    margin-top: 10px;
+    padding: 10px 40px;
+    width: fit-content;
+    border: none;
+}
+.email button:hover{
+    background-color: #fafafa;
+    border: 1px solid #9f9dff;
 }
