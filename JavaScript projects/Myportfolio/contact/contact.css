@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+html{
+    font-size: 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.head{
+    padding: 15px 20px;
+    width: 80%;
+    border: 1px solid #a5a5a541;
+    border-radius: 5px;
+    background-color: #333333;
+}
+.head h1{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 2px solid white;
+}
+.phone, .intro{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    font-size: 4rem;
+    margin-right: 20px;
+}
+.intro .icon{
+    font-size: 3rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.info h2{
+    font-weight: 500;
+}
+.info p{
+    width: 400px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.email{
+    display: flex;
+    flex-direction: column; 
+}
+textarea{
+    background-color: #fafafa;
+    border: 2px solid #b4b4b4;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+}
+.email, .phone{
+    margin: 0 50px;
+}
