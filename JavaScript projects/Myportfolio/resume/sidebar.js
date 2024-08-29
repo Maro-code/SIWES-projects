@@ -23,11 +23,11 @@ texts.forEach(txt => {
         if (linkText === "Resume") {
             window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
         } else if (linkText === "Contact") {
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/contact/contact.html");
+            window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html");
         } else if (linkText === "Home") {
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/home/myport.html");
+            window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html");
         } else if (linkText === "Portfolio") {
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
+            window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
         }
     });
 });
