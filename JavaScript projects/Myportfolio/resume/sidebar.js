@@ -1,4 +1,5 @@
-let options = document.querySelectorAll(".option .icon-op");
+document.addEventListener('DOMContentLoaded', function() {
+    let options = document.querySelectorAll(".option .icon-op");
 let texts = document.querySelectorAll(".option");
 
 options.forEach(option => {
@@ -6,27 +7,7 @@ options.forEach(option => {
 });
 
 // Add mouseover event listeners to each text option
-texts.forEach(txt => {
-    txt.addEventListener("mouseover", (event) => {
-        // Hide all options
-        options.forEach(option => {
-            option.style.display = "none";
-        });
-
-        // Find the specific option related to the hovered element
-        let iconOp = txt.querySelector(".icon-op"); // Use 'txt' to find the icon-op
-        if (iconOp) {
-            iconOp.style.display = "flex"; // Show the specific option
-        }
-    });
-
-    txt.addEventListener("mouseout", () => {
-        let iconOp = txt.querySelector(".icon-op");
-        if (iconOp) {
-            iconOp.style.display = "none"; // Hide the icon on mouse out
-        }
-    });
-    
+texts.forEach(txt => { 
     
     txt.addEventListener("click", () => {
         options.forEach(option => {
@@ -49,4 +30,5 @@ texts.forEach(txt => {
             window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
         }
     });
+});
 });
