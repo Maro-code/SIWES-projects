@@ -5,15 +5,13 @@ options.forEach(option => {
 });
 text.forEach(txt => {
     txt.addEventListener("click", () => {
-        // Hide all options
         options.forEach(option => {
             option.style.display = "none";
         });
 
-        // Show the corresponding icon
         let option = txt.querySelector(".icon-op");
         if (option) {
-            option.style.display = "flex"; // Set display to flex
+            option.style.display = "flex";
         }
         if((txt.querySelector(" a")).innerHTML=="Resume"){
             window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html","_blank");

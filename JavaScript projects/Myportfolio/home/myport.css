@@ -63,7 +63,7 @@ body {
     font-size: 1.2rem;
 }
 
-.btnprimary {
+#btnprimary {
     background-color: #B8B7FF; 
     color: white;
     border: none;

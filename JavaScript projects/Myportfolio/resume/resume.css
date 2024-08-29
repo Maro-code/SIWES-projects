@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 60px;
+    width: fit-content;
 }
 .cont{
     margin-top: 30px;
@@ -22,7 +23,7 @@ html {
 }
 .head{
     padding: 20px;
-    width: 80%;
+    width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
     background-color: #333333;
@@ -87,4 +88,65 @@ html {
 }
 .education .card{
     margin: 20px 40px;
+}
+.bar{
+    background-color: #B8B7FF;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    margin-left: 10px;
+}
+#sidebar{
+    padding: 10px 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.line{
+    width: 0px;
+    height: 30px;
+    border: 2px solid black;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 200px;
+}
+.option a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 5px;
+    text-align: center;
+}
+.icon-op{
+    padding: 8px;
+    color: #fafafa;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+.profile {
+    mask-image: linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0) );
+}
+
+#profile{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
 }
