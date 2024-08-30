@@ -1,26 +1,52 @@
-let options = document.querySelectorAll(".option .icon-op");
-let text = document.querySelectorAll(".option");
-options.forEach(option => {
-    option.style.display = "none";
-});
-text.forEach(txt => {
-    txt.addEventListener("click", () => {
-        options.forEach(option => {
-            option.style.display = "none";
+document.addEventListener('DOMContentLoaded', function() {
+    let options = document.querySelectorAll(".option .icon-op");
+    let texts = document.querySelectorAll(".option");
+
+    options.forEach(option => {
+        option.style.display = "none";
+    });
+
+    // Add mouseover event listeners to each text option
+    texts.forEach(txt => {
+        txt.addEventListener("mouseover", () => {
+            // Show the icon inside the current text option
+            let iconOp = txt.querySelector(".icon-op");
+            if (iconOp) {
+                iconOp.style.display = "flex";
+            }
         });
 
-        let option = txt.querySelector(".icon-op");
-        if (option) {
-            option.style.display = "flex";
-        }
-        if((txt.querySelector(" a")).innerHTML=="Resume"){
-            window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html","_blank");
-        }else if((txt.querySelector(" a")).innerHTML=="Contact"){
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/contact/contact.html","_blank");
-        }else if((txt.querySelector(" a")).innerHTML=="Home"){
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/home/myport.html","_blank");
-        }else if((txt.querySelector(" a")).innerHTML=="Portfolio"){
-            window.open("http://127.0.0.1:5500/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html","_blank");
-        }
+        txt.addEventListener("mouseout", () => {
+            // Hide the icon when the mouse is out
+            let iconOp = txt.querySelector(".icon-op");
+            if (iconOp) {
+                iconOp.style.display = "none";
+            }
+        });
+
+        txt.addEventListener("click", () => {
+            let iconOp = txt.querySelector(".icon-op");
+
+            // Open links based on the text
+            const linkText = txt.querySelector("a").innerHTML;
+            switch (linkText) {
+                case "Resume":
+                    iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
+                    break;
+                case "Contact":
+                    iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html");
+                    break;
+                case "Home":
+                    iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html");
+                    break;
+                case "Portfolio":
+                    iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
+                    break;
+            }
+        });
     });
 });
