@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add mouseover event listeners to each text option
     texts.forEach(txt => {
         txt.addEventListener("mouseover", () => {
-            // Hide only the icons inside the current text option
+            // Show the icon inside the current text option
             let iconOp = txt.querySelector(".icon-op");
             if (iconOp) {
                 iconOp.style.display = "flex";
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         txt.addEventListener("mouseout", () => {
             // Hide the icon when the mouse is out
-            let iconOp = txt.querySelector(" .icon-op");
+            let iconOp = txt.querySelector(".icon-op");
             if (iconOp) {
                 iconOp.style.display = "none";
             }
@@ -31,20 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const linkText = txt.querySelector("a").innerHTML;
             switch (linkText) {
                 case "Resume":
-                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
                     iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
                     break;
                 case "Contact":
-                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html");
                     iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html");
                     break;
                 case "Home":
-                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html");
                     iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html");
                     break;
                 case "Portfolio":
-                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
                     iconOp.style.display = "flex";
+                    window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
                     break;
             }
         });
