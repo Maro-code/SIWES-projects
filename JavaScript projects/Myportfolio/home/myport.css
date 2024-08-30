@@ -6,15 +6,13 @@ body {
     padding: 0;
     background-color: #1c1c1c;
     color: #f0f0f0; 
-    font-family: Arial, sans-serif;
-}
-
-.hero {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100vw;
+    flex-flow: row wrap-reverse;
+    
 }
 .left{
     margin-left: 80px;
@@ -28,12 +26,13 @@ body {
     width: 360px;
     font-size: 3rem;
     margin: 0;
+    font-weight: 600;
 }
 
 .name {
     font-family: "Keania One", sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .ocptn {
@@ -70,10 +69,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: 0.2s ease-in-out;
 }
 
-.btnprimary:hover {
-    background-color: #908efe;
+#btnprimary:hover {
+    background-color: #fafafa;
+    border: 2px solid #B8B7FF;
+    color: #B8B7FF;
 }
 
 .right {
@@ -82,8 +84,8 @@ body {
     justify-content: center;
     flex: 1;
     height: 100vh;
-    -webkit-mask-image: linear-gradient(#000, rgb(184, 183, 255,0.2));
-    mask-image: linear-gradient(#000, rgba(0,0,0,0));
+    width: 100%;
+    mask-image: linear-gradient(#000 10%, rgba(0, 0, 0, 0) 95%);
 }
 
 #profile {
@@ -91,3 +93,37 @@ body {
     object-fit: cover;
     width: 100%; 
 }
+@media (min-width: 300px) and (max-width: 500px) {
+    .left, .right {
+        width: fit-content; 
+        height: 50%; 
+    }
+
+    .left {
+        padding-left: 50px; 
+    }
+
+    .right {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #profile {
+        object-fit: cover;
+        width: 100%; 
+        height: 100%;
+    }
+
+    .intro {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+    #btnprimary{
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+}
+
