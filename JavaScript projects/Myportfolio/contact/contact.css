@@ -22,7 +22,7 @@ main{
     width: fit-content;
 }
 .head{
-    padding: 8px;
+    padding: 10px;
     width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
@@ -69,7 +69,22 @@ main{
     justify-content: space-around;
     flex-direction: column;
     margin-top: 40px;
-    padding: 20px;
+    padding: 10px;
+}
+.foot{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #a5a5a541;
+    border-radius: 5px;
+    background-color: #333333;
+    margin-top: 40px;
+}
+.foot h1{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 .phone, .intro{
     display: flex;
@@ -78,6 +93,7 @@ main{
 .icon{
     font-size: 3rem;
     margin-right: 20px;
+    color: #B8B7FF;
 }
 .intro .icon{
     font-size: 3rem;
@@ -94,7 +110,7 @@ main{
     margin: 0;
 }
 .info p{
-    width: 400px;
+    width: 20rem;
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 5px;
@@ -115,7 +131,7 @@ textarea{
     height: 210px;
 }
 .email button{
-    background-color: #9f9dff;
+    background-color: #B8B7FF;
     color: #333333;
     font-size: 1rem;
     font-weight: 600;
@@ -127,7 +143,7 @@ textarea{
 }
 .email button:hover{
     background-color: #fafafa;
-    border: 1px solid #9f9dff;
+    border: 1px solid #B8B7FF;
 }
 .bar{
     background-color: #B8B7FF;
@@ -190,4 +206,43 @@ textarea{
     width: 300px;
     height: 250px;
     object-fit: cover;
+}
+
+@media (max-width: 500px) and (min-width: 300px){
+    .bar{
+        height: fit-content;
+        display: none;
+    }
+    .head h1{
+        font-size: 3rem;
+    }
+    .speech h1{
+        font-size: 2rem;
+    }
+    .speech p{
+        font-size: 1.2rem;
+        line-height: 30px;
+        width: 100%;
+    }
+    .engolf{ 
+        width: fit-content;
+    }
+    main{
+    }
+    .head, .foot{
+        padding: 0;
+    }
+    .info h2{
+        font-size: 1.8rem;
+    }
+    .info p{
+        font-size: 1rem;
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .phone{
+        margin-top: 40px;
+    }
 }
