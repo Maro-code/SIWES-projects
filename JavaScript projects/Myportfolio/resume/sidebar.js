@@ -31,28 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const linkText = txt.querySelector("a").innerHTML;
             switch (linkText) {
                 case "Resume":
-                    if (iconOp) {
-                        iconOp.style.display = "flex";
-                    }
                     window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
+                    iconOp.style.display = "flex";
                     break;
                 case "Contact":
-                    if (iconOp) {
-                        iconOp.style.display = "flex";
-                    }
                     window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html");
+                    iconOp.style.display = "flex";
                     break;
                 case "Home":
-                    if (iconOp) {
-                        iconOp.style.display = "flex";
-                    }
                     window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html");
+                    iconOp.style.display = "flex";
                     break;
                 case "Portfolio":
-                    if (iconOp) {
-                        iconOp.style.display = "flex";
-                    }
                     window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html");
+                    iconOp.style.display = "flex";
                     break;
             }
         });
