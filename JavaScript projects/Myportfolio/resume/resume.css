@@ -22,7 +22,7 @@ html {
     font-size: 20px;
 }
 .head{
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
@@ -31,8 +31,9 @@ html {
 .head h1{
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: #ffffff;
 }
 .card{
     background-color: #f0f0f0;
@@ -75,7 +76,6 @@ html {
 .writeup{
     margin-top: 10px;
     width: 300px;
-    max-height: 150px;
 }
 .ed{
     display: flex;
@@ -149,4 +149,29 @@ html {
     width: 300px;
     height: 250px;
     object-fit: cover;
+}
+
+@media (max-width: 500px) and (min-width: 300px){
+    .bar{
+        display: none;
+    }
+    .head h1{
+        font-size: 2.5rem;
+    }
+    .ed h1{
+        font-size: 2rem;
+    }
+    .education{
+        flex-direction: column;
+    }
+    .sub-title{
+        font-size: 1.5rem;
+    }
+    .institution{
+        font-size: 1.5rem ;
+    }
+    .writeup{
+        width: 25rem;
+        font-size: 1.5rem;
+    }
 }
