@@ -6,6 +6,8 @@ body {
       background-color: #1c1c1c;
       background-size: cover;
       background-repeat: no-repeat;
+      font-family: "Ubuntu", sans-serif;
+      font-style: normal;
   }
     
     html {
@@ -14,10 +16,8 @@ body {
   
     h1{
       font-size: 1.2rem;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: 700;
-      font-style: normal;
       color: #fafafa;
+      font-weight: 500;
     }
     .head{
       padding: 20px;
@@ -30,7 +30,7 @@ body {
       text-align: center;
       font-size: 1.5rem;
       font-family: "Ubuntu", sans-serif;
-      font-weight: 500;
+      font-weight: 700;
       font-style: normal;
     }
     .container{
@@ -72,23 +72,27 @@ body {
   }
   
     .card {
-      width: 225px;
-      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: fit-content;
+      height: 400px;
       border-radius: 20px;
       background-color: rgb(238, 238, 238);
     }
     
     .card-head {
-      font-size: 0.9rem;
+      width: 100%;
+      margin: 20px 0;
+      font-size: 0.8rem;
       background-color: rgb(164, 164, 164);
       text-align: center;
-      font-family: "Chakra Petch", sans-serif;
       font-weight: 600;
-      font-style: normal;
     }
     
     .cont ,.cont2 {
       display: flex;
+      padding: 5px 0;
       justify-content: center;
       align-items: center;
       width: 90%;
@@ -107,8 +111,8 @@ body {
     }
   
     .cont2 img{
-      width: 200px;
-      height: 150px;
+      width: 175px;
+      height: 125px;
       border-radius: 10px;
       transition: all 0.5s;
     }
@@ -119,8 +123,6 @@ body {
     
     .desc {
       text-align: center;
-      font-family: "Chakra Petch", sans-serif;
-      font-style: normal;
       font-size: 0.8rem;
       display: flex;
       flex-direction: column;
@@ -129,8 +131,16 @@ body {
     .desc a{
       text-decoration: none;
       color: rgb(77, 77, 77);
+      margin: 10px 0;
+      font-weight: 500;
     }
-    
+    .desc p{
+      width: 200px;
+      font-weight: 400;
+      text-align: left;
+      padding: 0 10px;
+      margin: 10px 0;
+    }
     .desc a:hover {
       color: #06318e;
     }
@@ -272,11 +282,24 @@ body {
       #options .opt{
         font-size: 2rem;
       }
+      h1{
+        font-size: 2rem;
+      }
+      .head{
+        margin: 40px 0;
+      }
       .head h1{
         font-size: 3rem;
       }
+      .card{
+        height: fit-content;
+      }
       .card-head {
-        font-size: 2rem;
+        font-size: 1.5rem;
+      }
+      .desc p{
+        width: 400px;
+        padding: 0 15px;
       }
       .desc p, .desc a{
         font-size: 1.8rem;
@@ -284,21 +307,20 @@ body {
       .grid-container{
         gap: 80px ;
       }
-      .card{
-        width: 350px;
-        height: 500px;
-      }
       .cont img {
         width: 70%;
-        height: 150px;
+        height: 200px;
         margin: 12px;
         border-radius: 10px;
         transition: all 0.5s;
       }
+      .cont2{
+        padding: 20px 0
+      }
     
       .cont2 img{
-        width: 300px;
-        height: 225px;
+        width: 325px;
+        height: 200px;
         border-radius: 10px;
         transition: all 0.5s;
       }
