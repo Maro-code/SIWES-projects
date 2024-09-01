@@ -6,53 +6,60 @@ body {
     background-repeat: no-repeat;
     color: white;
     font-family: "Ubuntu", sans-serif;
-    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-html{
+
+html {
     font-size: 20px;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     width: fit-content;
 }
-.head{
+
+.head, .foot {
     padding: 10px;
     width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
     background-color: #333333;
 }
-.head h1{
+
+.head h1, .foot h1 {
     width: 100%;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     color: #ffffff;
 }
-.speech{
+
+.speech {
     width: fit-content;
     margin-top: 15px;
     color: #f6f6f6;
 }
-.speech h1{
+
+.speech h1 {
     font-size: 1.5rem;
     font-weight: 500;
     margin: 0;
 }
-.speech p{
+
+.speech p {
     width: 50rem;
     margin-top: 5px;
     font-size: 0.8rem;
     line-height: 25px;
     color: #d9d9d9;
 }
-.container{
+
+.container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,7 +68,8 @@ main{
     border-top: 2px solid;
     border-image: linear-gradient(to right, #333, rgb(255, 255, 255), #333) 1;
 }
-.engolf{
+
+.engolf {
     width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
@@ -72,56 +80,45 @@ main{
     margin-top: 40px;
     padding: 10px;
 }
-.foot{
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #a5a5a541;
-    border-radius: 5px;
-    background-color: #333333;
-    margin-top: 40px;
-}
-.foot h1{
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-.phone, .intro{
+
+.phone, .intro {
     display: flex;
     align-items: top;
 }
-.icon{
+
+.icon {
     font-size: 3rem;
     margin-right: 20px;
     color: #B8B7FF;
 }
-.intro .icon{
-    font-size: 3rem;
-}
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.info h2{
+
+.info h2 {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0;
 }
-.info p{
+
+.info p {
     width: 20rem;
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 5px;
     color: #d9d9d9;
 }
-.email{
+
+.email {
     display: flex;
     flex-direction: column; 
 }
-textarea{
+
+textarea {
     background-color: #fafafa;
     border: 2px solid #b4b4b4;
     border-radius: 5px;
@@ -132,22 +129,25 @@ textarea{
     width: 400px;
     height: 210px;
 }
-.email button{
+
+.email button {
     background-color: #B8B7FF;
     color: #333333;
     font-size: 1rem;
     font-weight: 600;
-    border-radius:5px;
+    border-radius: 5px;
     margin-top: 10px;
     padding: 10px 40px;
     width: fit-content;
     border: none;
 }
-.email button:hover{
+
+.email button:hover {
     background-color: #fafafa;
     border: 1px solid #B8B7FF;
 }
-#bar{
+
+#bar {
     background-color: #b8b7ff;
     border-radius: 2px;
     display: flex;
@@ -155,28 +155,33 @@ textarea{
     align-items: center;
     margin-left: 10px;
 }
-#sidebar{
+
+#sidebar {
     padding: 10px 0;
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
-.line{
+
+.line {
     width: 0px;
     height: 30px;
     border: 2px solid black;
 }
-.option{
+
+.option {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
     width: 200px;
 }
-.option a{
+
+.option a {
     text-decoration: none;
     color: #000000;
     font-size: 1rem;
@@ -184,7 +189,8 @@ textarea{
     margin-left: 5px;
     text-align: center;
 }
-.icon-op{
+
+.icon-op {
     padding: 8px;
     color: #fafafa;
     width: 25px;
@@ -196,16 +202,18 @@ textarea{
     border-radius: 50px;
     margin-right: 5px;
 }
+
 .profile {
-    mask-image: linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0) );
+    mask-image: linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0));
 }
 
-#profile{
+#profile {
     width: 300px;
     height: 250px;
     object-fit: cover;
 }
-#hamburger{
+
+#hamburger {
     padding: 2px;
     color: #fafafa;
     width: 60px;
@@ -221,10 +229,12 @@ textarea{
     top: 6rem;
     right: 1.5rem;
 }
-#hamburger{
-    display: none;
+
+#hamburger {
+    display: none; /* Initially hidden */
 }
-.nav{
+
+.nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -234,46 +244,46 @@ textarea{
     right: 30px;
 }
 
-@media (max-width: 500px) and (min-width: 300px){
-    #bar{
-        display: none;
+@media (max-width: 500px) and (min-width: 300px) {
+    #bar {
+        display: none; /* Hide sidebar on small screens */
     }
-    #hamburger{
-        display: flex;
+    #hamburger {
+        display: flex; /* Show hamburger menu on small screens */
     }
-    .head h1{
+    .head h1 {
         font-size: 2.2rem;
     }
-    .foot h1{
+    .foot h1 {
         font-size: 1.2rem;
     }
-    .speech h1{
+    .speech h1 {
         font-size: 1.8rem;
     }
-    .speech p{
+    .speech p {
         font-size: 1rem;
         width: 100%;
     }
-    .engolf{ 
+    .engolf { 
         width: fit-content;
     }
-    .head, .foot{
+    .head, .foot {
         padding: 0;
     }
-    .info h2{
+    .info h2 {
         font-size: 1.8rem;
     }
-    .info p{
+    .info p {
         font-size: 1rem;
         width: 100%;
     }
-    .container{
+    .container {
         flex-direction: column;
     }
-    .phone{
+    .phone {
         margin-top: 40px;
     }
-    textarea{
+    textarea {
         width: 90%;
     }
 }

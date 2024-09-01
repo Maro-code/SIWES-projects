@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add the listener on load and when resizing the window
     addClickOutsideListener();
     window.addEventListener('resize', addClickOutsideListener);
 });
