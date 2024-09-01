@@ -244,12 +244,23 @@ textarea {
     right: 30px;
 }
 
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(-20px); }
+    40% { transform: translateY(20px); }
+    60% { transform: translateY(-20px); }
+    80% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
 @media (max-width: 500px) and (min-width: 300px) {
     #bar {
         display: none; /* Hide sidebar on small screens */
     }
     #hamburger {
         display: flex; /* Show hamburger menu on small screens */
+        animation-name: bounce;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
     }
     .head h1 {
         font-size: 2.2rem;

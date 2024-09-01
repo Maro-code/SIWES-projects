@@ -277,11 +277,11 @@ body {
   }
 
   #hamburger{
-    padding: 20px;
+    padding: 30px;
     color: #fafafa;
-    width: 100px;
-    height: 100px;
-    font-size: 50px;
+    width: 150px;
+    height: 150px;
+    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,7 +304,14 @@ body {
     top: 50px;
     right: 30px;
 }
-
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(-20px); }
+  40% { transform: translateY(20px); }
+  60% { transform: translateY(-20px); }
+  80% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
     @media (max-width: 500px) and (min-width: 300px){
       html{
         font-size: 20px;
@@ -359,6 +366,9 @@ body {
       }
       #hamburger{
         display: flex;
+        animation-name: bounce;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
       }
       #sidebar{
         padding: 20px 0;
