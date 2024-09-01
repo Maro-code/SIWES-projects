@@ -148,11 +148,14 @@ textarea {
 }
 
 #bar {
-    background-color: #b8b7ff;
+    background-color: #B8B7FF;
     border-radius: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
     margin-left: 10px;
 }
 
@@ -205,6 +208,7 @@ textarea {
 
 .profile {
     mask-image: linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0));
+    border-radius: 2px 2px 0 0;
 }
 
 #profile {

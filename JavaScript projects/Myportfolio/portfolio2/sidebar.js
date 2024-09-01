@@ -59,19 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleClickOutside(event) {
         if (!bar.contains(event.target) && !menu.contains(event.target)) {
-            bar.style.display = "none";
-            menu.style.display = "flex"; 
+            bar.style.display = "none"; // Hide the menu
+            menu.style.display = "flex"; // Show the hamburger button
         }
     }
 
     function addClickOutsideListener() {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 768) { // Adjust the width as needed for mobile
             document.addEventListener("click", handleClickOutside);
         } else {
             document.removeEventListener("click", handleClickOutside);
         }
     }
 
+    // Add the listener on load and when resizing the window
     addClickOutsideListener();
     window.addEventListener('resize', addClickOutsideListener);
 });
