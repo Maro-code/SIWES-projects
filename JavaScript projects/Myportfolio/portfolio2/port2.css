@@ -76,7 +76,7 @@ body {
       flex-direction: column;
       justify-content: center;
       width: fit-content;
-      height: 400px;
+      height: 25rem;
       border-radius: 20px;
       background-color: rgb(238, 238, 238);
     }
@@ -96,7 +96,7 @@ body {
       justify-content: center;
       align-items: center;
       width: 90%;
-      height: 50%;
+      height: 100%;
       border: 5px 0px solid;
       border-radius: 0 20px 20px 0;
       background-color: rgb(255, 255, 255);
@@ -136,6 +136,7 @@ body {
     }
     .desc p{
       width: 200px;
+      height: 5rem;
       font-weight: 400;
       text-align: left;
       padding: 0 10px;
@@ -340,13 +341,14 @@ body {
         font-size: 3rem;
       }
       .card{
-        height: fit-content;
+        height:fit-content;
       }
       .card-head {
         font-size: 1.5rem;
       }
       .desc p{
         width: 400px;
+        height: 15rem;
         padding: 0 15px;
       }
       .desc p, .desc a{
