@@ -159,12 +159,23 @@ html {
     background-color: #000000;
     border-radius: 100px;
     margin-right: 5px;
-    position: fixed;
-    top: 11.5rem;
-    right: 1.5rem;
 }
-#hamburger{
-    display: none;
+
+#ham{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 10rem;
+  right: 1.5rem;
+  color: #fff;
+}
+#ham p{
+  font-size: 1.5rem;
+  margin: none;
+}
+#ham {
+    display: none; /* Default state: hidden */
 }
 .nav{
     display: flex;
@@ -184,12 +195,12 @@ html {
     100% { transform: translateY(0); }
 }
 
-@media (max-width: 500px) and (min-width: 300px){
+@media only screen and (max-width: 500px){
     #bar{
         display: none;
     }
-    #hamburger{
-        display: flex;
+    #ham {
+        display: flex; /* Show hamburger menu on small screens */
         animation-name: bounce;
         animation-duration: 4s;
         animation-iteration-count: infinite;

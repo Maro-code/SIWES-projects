@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    let menu = document.getElementById("hamburger");
+    let menu = document.getElementById("ham");
     let bar = document.getElementById("bar");
     menu.addEventListener("click", ()=>{
         menu.style.display = "none";

@@ -288,12 +288,22 @@ body {
     background-color: #000000;
     border-radius: 100px;
     margin-right: 5px;
-    position: fixed;
-    top: 15rem;
-    right: 1.5rem;
 }
-#hamburger{
+#ham{
     display: none;
+}
+#ham{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 15rem;
+  right: 1.5rem;
+  color: #fff;
+}
+#ham p{
+  font-size: 2.5rem;
+  margin: none;
 }
 .nav{
     display: flex;
@@ -365,7 +375,7 @@ body {
       #bar{
         display: none;
       }
-      #hamburger{
+      #ham{
         display: flex;
         animation-name: bounce;
         animation-duration: 4s;

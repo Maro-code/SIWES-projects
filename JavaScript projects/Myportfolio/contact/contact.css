@@ -229,13 +229,22 @@ textarea {
     background-color: #000000;
     border-radius: 100px;
     margin-right: 5px;
-    position: fixed;
-    top: 6rem;
-    right: 1.5rem;
 }
-
-#hamburger {
-    display: none; /* Initially hidden */
+#ham{
+    display: none;
+}
+#ham{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 5rem;
+  right: 1.5rem;
+  color: #fff;
+}
+#ham p{
+  font-size: 1rem;
+  margin: none;
 }
 
 .nav {
@@ -260,7 +269,7 @@ textarea {
     #bar {
         display: none; /* Hide sidebar on small screens */
     }
-    #hamburger {
+    #ham {
         display: flex; /* Show hamburger menu on small screens */
         animation-name: bounce;
         animation-duration: 4s;
