@@ -1,12 +1,16 @@
-let target = document.getElementById("icon");
-let ans = document.getElementById("ans");
-ans.style.display = "none";
-function spin(){
-    if(target.style.transform == 'rotate(-90deg)'){
-        target.style.transform = 'rotate(0deg)';
-        ans.style.display = "flex";
-    }else{
-        target.style.transform = 'rotate(-90deg)';
-        ans.style.display = "none";
-    }
-}
+let target = document.querySelectorAll(".icon");
+/*let ans = document.querySelectorAll("ans");
+ans.style.display = "none";*/
+    target.forEach(targ =>{
+        targ.addEventListener("click",()=>{
+            const par = targ.parentElement.parentElement;
+            const answer = par.querySelector(" .ans");
+            if(targ.style.transform == 'rotate(-90deg)'){
+                targ.style.transform = 'rotate(0deg)';
+                answer.style.display = "flex";
+            }else{
+                targ.style.transform = 'rotate(-90deg)';
+                answer.style.display = "none";
+            }
+        })
+    })

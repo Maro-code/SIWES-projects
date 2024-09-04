@@ -6,15 +6,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 2px solid black;
     width: fit-content;
+    background-color: rgba(0, 0, 255, 0.186);
+    backdrop-filter: blur(100px);
+    padding: 40px;
+    border-radius: 5px;
+    margin: 10% 33%;
 }
 .item{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#question{
+.question{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,10 +28,14 @@ body{
     padding: 5px 10px;
     background-color: #3333;
 }
-#icon{
+.icon{
     transform: rotate(-90deg);
 }
-#ans{
+.item{
+    margin-bottom: 20px;
+}
+.ans{
     text-align: justify;
     width: 500px;
+    display: none;
 }
