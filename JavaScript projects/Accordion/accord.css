@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#accord{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid black;
+    width: fit-content;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(104, 104, 104, 0.71);
+    width: 500px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #3333;
+}
+#icon{
+    transform: rotate(-90deg);
+}
+#ans{
+    text-align: justify;
+    width: 500px;
+}
