@@ -11,10 +11,9 @@ body{
     display: flex;
     flex-direction: column;
 }
-/* Navbar Styles */
 .navbar{
+    width: 100vw;
     background-image: linear-gradient(to left,red,purple);
-    overflow: hidden;
 }
 .navbar ul{
     list-style-type: none;
@@ -23,7 +22,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 .navbar li{
     color: white;
@@ -37,11 +36,15 @@ body{
 }
 /* Mid Section Styles */
 #mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-top: 50px;
     flex: 1;
 }
 form{
+
     line-height: 50px;
 }
 input[type="submit"] {
@@ -52,7 +55,7 @@ select{
     width: 200px;
     height: 40px;
     font-size: 1.2em;
-    margin: 5px;
+    margin: 5px 10px;
 }
 
 footer{
@@ -61,6 +64,7 @@ footer{
     padding: 20px 10%;
     background-color: lightgrey;
     flex-wrap: wrap;
+    width: 100vw;
 }
 footer section{
     flex-basis: 30%;
@@ -74,35 +78,16 @@ footer section{
 h1{
     font-size: 3rem;
 }
-.mins{
-    padding: 10px;
-    border-bottom: 1px solid #5e5e5e;
-}
-.mins li{
-    padding: 5px 0;
-}
-.mins li:hover{
-    border-radius: 5px;
-    background-color: #d9d9d9;
-    border: 0.5px solid #b9b9b9;
-}
-.logs{
-    margin-top: 10px;
-}
-.logs button{
-    margin: 5px;
-}
-#close{
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    font-size: 20px;
-}
-#close:hover{
-    background-color: #5e5e5e;
-}
 
-@media screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar li {
+        padding: 10px;
+    }
     .logo {
         width: 60px;
         height: auto;
@@ -116,5 +101,12 @@ h1{
     footer section {
         flex-basis: 100%;
         margin-bottom: 20px;
-    }
+}
+select{
+    display: block;
+    width: 400px;
+    height: 70px;
+    font-size: 1.2em;
+    margin: 10px;
+}
 }
