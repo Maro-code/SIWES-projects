@@ -270,10 +270,10 @@ textarea {
 }
 @media (max-width: 500px) and (min-width: 300px) {
     #bar {
-        display: none; /* Hide sidebar on small screens */
+        display: none; 
     }
     #ham {
-        display: flex; /* Show hamburger menu on small screens */
+        display: flex; 
         animation-name: bounce;
         animation-duration: 4s;
         animation-iteration-count: infinite;
