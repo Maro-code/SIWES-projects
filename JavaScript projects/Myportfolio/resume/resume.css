@@ -16,7 +16,7 @@ body {
 }
 .cont{
     margin-top: 30px;
-    width: 100%;
+    width: fit-content;
 }
 html {
     font-size: 20px;
@@ -204,7 +204,7 @@ html {
 @media (max-width: 500px) and (min-width: 300px) {
     .container {
         padding: 10px;
-        width: 100vw;
+        width: fit-content;
     }
     .head{
         padding: 0;
