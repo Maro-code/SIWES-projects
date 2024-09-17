@@ -15,17 +15,19 @@ html {
     font-size: 20px;
 }
 
-main {
+.main {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    width: fit-content;
-}
-
-.head, .foot {
-    padding: 10px;
+    justify-content: center;
     width: 100%;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.head, .foot {
+    padding: 1rem 0;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
     background-color: #333333;
@@ -37,9 +39,10 @@ main {
 .head h1, .foot h1 {
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
-    color: #ffffff;
+    font-style: normal;
 }
 
 .speech {
@@ -55,7 +58,7 @@ main {
 }
 
 .speech p {
-    width: 50rem;
+    width: 100%;
     margin-top: 5px;
     font-size: 0.8rem;
     line-height: 25px;
@@ -65,6 +68,7 @@ main {
 .container {
     width: 100%;
     display: flex;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
@@ -73,7 +77,6 @@ main {
 }
 
 .engolf {
-    width: 100%;
     border: 1px solid #a5a5a541;
     border-radius: 5px;
     background-color: #333333;
@@ -109,7 +112,7 @@ main {
 }
 
 .info p {
-    width: 20rem;
+    width: 100%;
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 5px;
@@ -156,10 +159,8 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    margin-left: 10px;
+    height: 90%;
+    margin-left: 15rem;
 }
 
 #sidebar {
@@ -215,13 +216,13 @@ textarea {
 }
 
 #profile {
-    width: 300px;
+    width: 250px;
     height: 250px;
     object-fit: cover;
 }
 
-#hamburger {
-    padding: 2px;
+#hamburger{
+    padding: 10px;
     color: #fafafa;
     width: 60px;
     height: 60px;
@@ -236,28 +237,17 @@ textarea {
 #ham{
     display: none;
 }
-#ham{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 5rem;
-  right: 1.5rem;
-  color: #fff;
-}
+
 #ham p{
   font-size: 1rem;
   margin: none;
 }
 
-.nav {
+.nav{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
-    position: fixed;
-    top: 50px;
-    right: 30px;
 }
 
 @keyframes bounce {
@@ -270,14 +260,26 @@ textarea {
 }
 @media (max-width: 500px) and (min-width: 300px) {
     #bar {
+        position: fixed;
+        top: 1rem;
+        right: 30px;
         display: none; 
     }
-    #ham {
-        display: flex; 
+    #ham{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 5rem;
+        right: 1.5rem;
+        color: #fff;
         animation-name: bounce;
         animation-duration: 4s;
         animation-iteration-count: infinite;
-    }
+      }
+      .main{
+        width: 100%;
+      }
     .head h1 {
         font-size: 2.2rem;
     }
@@ -294,6 +296,9 @@ textarea {
     .engolf { 
         width: fit-content;
     }
+    .container{
+        flex-flow: row wrap;
+    }
     .head, .foot {
         padding: 0;
     }
@@ -304,13 +309,45 @@ textarea {
         font-size: 1rem;
         width: 100%;
     }
-    .container {
-        flex-direction: column;
-    }
     .phone {
         margin-top: 40px;
     }
     textarea {
         width: 90%;
+    }
+    .container .phone{
+        margin-top: 1rem;
+    }
+}
+@media (max-width: 1000px) and (min-width: 501px){
+    #bar {
+        position: fixed;
+        top: 1rem;
+        right: 30px;
+        display: none; 
+    }
+    
+    .container {
+        width: 100%;
+    }
+    #ham{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 5rem;
+        right: 1.5rem;
+        color: #fff;
+        animation-name: bounce;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+    .container{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .container .phone{
+        margin-top: 1rem;
     }
 }
