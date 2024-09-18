@@ -263,7 +263,7 @@ textarea {
         position: sticky;
         top: 1rem;
         right: 30px;
-        height: 90vh;
+        height: fit-content;
         display: none; 
     }
     #ham{
@@ -328,7 +328,7 @@ textarea {
         position: sticky;
         top: 1rem;
         right: 30px;
-        height: 90vh;
+        height: fit-content;
         display: none; 
     }
     .container {
