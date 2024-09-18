@@ -260,9 +260,10 @@ textarea {
 }
 @media (max-width: 500px) and (min-width: 300px) {
     #bar {
-        position: fixed;
+        position: sticky;
         top: 1rem;
         right: 30px;
+        height: 90vh;
         display: none; 
     }
     #ham{
@@ -324,9 +325,10 @@ textarea {
 }
 @media (max-width: 1000px) and (min-width: 501px){
     #bar {
-        position: fixed;
+        position: sticky;
         top: 1rem;
         right: 30px;
+        height: 90vh;
         display: none; 
     }
     .container {
