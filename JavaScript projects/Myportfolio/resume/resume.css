@@ -92,12 +92,10 @@ html {
 .education{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     width: 100%;
 }
-.education .card{
-    margin: 20px 40px;
-}
+
 #bar {
     background-color: #B8B7FF;
     border-radius: 2px;
@@ -238,8 +236,11 @@ html {
     .writeup{
         width: 15rem;
     }
+    .card{
+        margin: 1rem 0;
+    }
 }
-@media (max-width: 800px) and (min-width: 501px){
+@media (max-width: 1000px) and (min-width: 501px){
     #bar{
         display: none;
     }
@@ -252,5 +253,8 @@ html {
         animation-name: bounce;
         animation-duration: 4s;
         animation-iteration-count: infinite;
+    }
+    .card{
+        margin: 1rem 0;
     }
 }

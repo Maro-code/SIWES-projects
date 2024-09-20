@@ -68,7 +68,7 @@ main {
 .container {
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
@@ -260,9 +260,10 @@ textarea {
 }
 @media (max-width: 500px) and (min-width: 300px) {
     #bar {
-        position: fixed;
+        position: sticky;
         top: 1rem;
         right: 30px;
+        height: fit-content;
         display: none; 
     }
     #ham{
@@ -324,9 +325,10 @@ textarea {
 }
 @media (max-width: 1000px) and (min-width: 501px){
     #bar {
-        position: fixed;
+        position: sticky;
         top: 1rem;
         right: 30px;
+        height: fit-content;
         display: none; 
     }
     .container {
