@@ -65,14 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function addClickOutsideListener() {
-        if (window.innerWidth <= 768) { // Adjust the width as needed for mobile
+        if (window.innerWidth <= 1000) { // Adjust the width as needed for mobile
             document.addEventListener("click", handleClickOutside);
         } else {
             document.removeEventListener("click", handleClickOutside);
         }
     }
 
-    // Add the listener on load and when resizing the window
     addClickOutsideListener();
     window.addEventListener('resize', addClickOutsideListener);
 });
