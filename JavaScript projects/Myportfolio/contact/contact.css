@@ -263,7 +263,6 @@ textarea {
         position: fixed;
         top: 1rem;
         right: 30px;
-        height: fit-content;
         display: none; 
     }
     #ham{
@@ -328,7 +327,6 @@ textarea {
         position: fixed;
         top: 1rem;
         right: 30px;
-        height: fit-content;
         display: none; 
     }
     .container {
