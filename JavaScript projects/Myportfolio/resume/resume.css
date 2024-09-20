@@ -46,12 +46,13 @@ html {
     color: #333333;
     display: flex;
     flex-direction: column;
-    align-items: space-around;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
     padding: 15px;
     width: fit-content;
     border-radius: 10px;
     border: 4px solid #80808092;
+    margin: 2rem;
 }
 .sub-title{
     background-color: #B8B7FF;
@@ -254,6 +255,7 @@ html {
         animation-duration: 4s;
         animation-iteration-count: infinite;
     }
+    .education{flex-direction: column;}
     .card{
         margin: 1rem 0;
     }
