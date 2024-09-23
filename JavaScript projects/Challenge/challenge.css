@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Lato", sans-serif;
     background-color: #fbfbfb;
 }
 
@@ -107,7 +107,7 @@ html{
     align-items: center;
 }
 .sec2{
-    margin: 9rem 1.2rem;
+    margin: 9rem 5rem;
     text-align: center;
 }
 .cont1{
@@ -125,7 +125,6 @@ html{
 }
 .cont2 p, .cont3 p{
     width: 90%;
-    font-weight: 100;
 }
 .cont1, .cont2, .cont3{
     font-size: 0.85rem;
@@ -153,7 +152,7 @@ html{
     align-items: center;
 }
 #download h3{
-    font-weight: 100;
+    font-weight: 300;
 }
 #download i{
     margin-left: 1rem;
@@ -176,7 +175,7 @@ html{
     cursor: pointer;
 }
 #btn h3{
-    font-weight: 100;
+    font-weight: 300;
 }
 #btn i{
     margin-left: 0.5rem;
@@ -353,11 +352,23 @@ html{
 }
 .footer h3, .footer .icons{
     margin: 0 1rem;
-    font-weight: 100;
-    font-size: 0.7rem;
+    font-weight: 400;
+    font-size: 0.65rem;
 }
 .footer h3{
     color: #7a7a7a;
+}
+.footer .icons{
+    font-size: 1rem;
+}
+.footer .icons a{
+    text-decoration: none;
+}
+#linkedin{
+    color: #0077B5;
+}
+#twitter{
+    color: #000;
 }
 .go{
     color: #333;
@@ -426,6 +437,12 @@ html{
     }
     .footer h3, .footer .icons{
         margin: 1rem 0.5rem;
+    }
+    #tweet-btn{
+        width: 100%;
+    }
+    .cont{
+        padding: 0 2rem;
     }
 }
 
