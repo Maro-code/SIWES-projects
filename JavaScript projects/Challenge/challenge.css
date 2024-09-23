@@ -1,11 +1,9 @@
-/* General body styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fbfbfb;
 }
 
-/* Header section styling */
 .header {
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -62,6 +60,7 @@ html{
         font-size: 2rem;
         font-weight: 900;
         text-shadow: 2px 2px 3px rgb(51, 51, 51);
+        text-align: left;
     }
     .banner .black-bg {
         position: absolute;
@@ -98,8 +97,9 @@ html{
     border-radius: 0.2rem;
 }
 #scopebtn i{
-    color: rgb(0, 0, 118);
-    margin-left: 1rem;
+    color: rgb(0, 0, 255);
+    font-size: 1rem;
+    margin-left: 0.5rem;
 }
 .container {
     display: flex;
@@ -296,7 +296,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 20rem;
     opacity: 0.2 black;
 }
@@ -304,6 +304,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
 }
 .cont h1{
     color: white;
@@ -325,12 +326,65 @@ html{
 #tweet-btn:hover {
     background-color: #5c5c5c;
 }
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2.5rem 0;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    bottom: 0;
+}
+.footer::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(255, 255, 255);
+}
+.footer h3, .footer .icons{
+    margin: 0 1rem;
+    font-weight: 100;
+    font-size: 0.7rem;
+}
+.footer h3{
+    color: #7a7a7a;
+}
+.go{
+    color: #333;
+}
 @media (max-width: 800px){
+    .header h1 {
+        font-size: 1.5rem;
+        font-weight: 750;
+    }
     .banner .title{
-        left: 5rem;
+        left: 0rem;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .banner, .banner .black-bg{
+        height: 80vh;
     }
     .banner .title h1{
         width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #scopebtn{
+        width: 100%;
+    }
+    .title h1{
+        line-height: 2rem;
     }
     .content{
         flex-direction: column;
@@ -342,7 +396,7 @@ html{
         margin: 0;
     }
     .sec2{
-        margin: 7rem 1rem;
+        margin: 6.2rem 1rem;
         text-align: center;
     }
     .pack{
@@ -366,6 +420,12 @@ html{
     }
     .cont h1{
         font-size: 2rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer h3, .footer .icons{
+        margin: 1rem 0.5rem;
     }
 }
 
