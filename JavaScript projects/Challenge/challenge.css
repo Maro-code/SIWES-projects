@@ -424,10 +424,10 @@ html{
         width: 100%;
     }
     .contact-form input{
-        width: 18rem;
+        width: 20rem;
     }
     .contact-form textarea{
-        width: 18rem;
+        width: 20rem;
     }
     .cont h1{
         font-size: 2rem;
@@ -445,4 +445,11 @@ html{
         padding: 0 2rem;
     }
 }
-
+@media (min-width: 300px) and (max-width: 500px){
+    .contact-form input{
+        width: 16rem;
+    }
+    .contact-form textarea{
+        width: 16rem;
+    }
+}
