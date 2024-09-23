@@ -4,7 +4,7 @@ const count = document.getElementById("count");
 const word = document.querySelector("#btn h3");
 let picture = document.getElementById("pic");
 button.addEventListener("click", () => {
-    const currentDirection = getComputedStyle(controls).flexDirection; // Moved inside the event listener
+    const currentDirection = getComputedStyle(controls).flexDirection;
 
     if((count.innerHTML == "1/2") && (word.innerHTML == "Next") && (currentDirection == "row")) {
         picture.src="./pic2.png";
