@@ -30,3 +30,34 @@ button.addEventListener("click", () => {
         controls.style.flexDirection = "row";
     }
 });
+
+const fileInput = document.getElementById('myfile');
+const attachmentItem = document.getElementById('target-file');
+const fileNameSpan = document.querySelector('.file-name');
+const fileSizeSpan = document.querySelector('.file-size');
+const removeFileSpan = document.querySelector('.remove-file');
+let fileCount = document.getElementById("file-count");
+attachmentItem.style.display = "none";
+// Listen for file input change
+fileInput.addEventListener('change', function() {
+    if (fileInput.files.length > 0) {
+        const file = fileInput.files[0]; // Get the first file
+        const fileName = file.name;      // Get file name
+        const fileSize = (file.size / 1024).toFixed(2); // File size in KB
+
+        // Display file name and size
+        fileNameSpan.textContent = fileName;
+        fileSizeSpan.textContent = `(${fileSize} KB)`;
+        newfileCount= parseInt(fileCount.innerHTML);
+        newfileCount++;
+        console.log(newfileCount);
+        fileCount.textContent = newfileCount;
+
+        // Show the attachment item
+        attachmentItem.style.display = 'flex';
+    }
+});
+function remove(){
+    let target = document.getElementById("target-file");
+    target.style.display = "none";
+}

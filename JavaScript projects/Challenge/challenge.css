@@ -137,6 +137,10 @@ html{
     padding: 3rem 1rem;
     background-color: #f1f1f1;
 }
+.sec3 a{
+    text-decoration: none;
+    color: black;
+}
 .intro{
     display: flex;
     justify-content: center;
@@ -152,10 +156,54 @@ html{
     align-items: center;
 }
 #download h3{
-    font-weight: 300;
+    font-weight: 400;
 }
 #download i{
     margin-left: 1rem;
+}
+#myfile{
+    border: none;
+    background-color: none;
+}
+.attachment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.attachment-item .file-name {
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+}
+
+.attachment-item .file-size {
+    font-size: 14px;
+    color: #666; /* Lighter color for file size */
+}
+
+.attachment-item .remove-file {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.left{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: fit-content;
+    flex: 1;
+    padding: 0;
+
 }
 .next{
     display: flex;
@@ -173,6 +221,7 @@ html{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: 2px solid;
 }
 #btn h3{
     font-weight: 300;
@@ -429,6 +478,9 @@ html{
     .contact-form textarea{
         width: 20rem;
     }
+    .attachment, .attachment-item{
+        width: 20rem;
+    }
     .cont h1{
         font-size: 2rem;
     }
@@ -444,12 +496,19 @@ html{
     .cont{
         padding: 0 2rem;
     }
+    .left{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 @media (min-width: 300px) and (max-width: 500px){
     .contact-form input{
         width: 16rem;
     }
     .contact-form textarea{
+        width: 16rem;
+    }
+    .attachment, .attachment-item{
         width: 16rem;
     }
 }

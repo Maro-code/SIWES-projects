@@ -60,9 +60,11 @@
             <h1>LOOKING FOR EXPERIENCE?</h1>
             <img src="./sideeye.png" id="sideeye" alt="sideeye icon">
         </div>
-        <div id="download">
-            <h3>DOWNLOAD MY RESUME</h3><i class="fa-solid fa-angle-right" id="targ"></i>
-        </div>
+        <a href="./siwes.pdf" download>
+            <div id="download">
+                <h3>DOWNLOAD MY RESUME</h3><i class="fa-solid fa-angle-right" id="targ"></i>
+            </div>
+        </a>
         <div id="resume">
             <div class="pack"><img src="./pic1.png" id="pic"></div>
             <div id="controls">
@@ -84,10 +86,18 @@
                 <textarea id="message" name="message" placeholder="Message"></textarea>
     
                 <div class="attachment">
-                    <span>📎 Attachments? Add them here.</span>
-                    <span>Attachments (0)</span>
+                    <label for="myfile">📎 Attachments? Add them here.</label>
+                    <input type="file" id="myfile" name="myfile" style="display: none;">
+                    <span>Attachments (<span id="file-count">0</span>)</span>
                 </div>
-    
+                <div class="attachment-item" id="target-file">
+                    <div class="left">
+                        <span class="file-name"></span>
+                        <span class="file-size"></span>
+                    </div>
+                    <span class="remove-file" onclick="remove()">×</span>
+                </div>
+                
                 <button type="submit" class="send-btn">SEND</button>
             </form>
         </div>
