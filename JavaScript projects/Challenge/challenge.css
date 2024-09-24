@@ -221,7 +221,6 @@ html{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 2px solid;
 }
 #btn h3{
     font-weight: 300;
