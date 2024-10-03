@@ -85,7 +85,7 @@ html{
     line-height: 3rem;
 }
 #scopebtn{
-    background-color: #383838;
+    background-color: #444;
     color: #fafafa;
     font-weight: 700;
     border: none;
@@ -95,6 +95,9 @@ html{
     justify-content: center;
     align-items: center;
     border-radius: 0.2rem;
+}
+#scopebtn:hover{
+    background-color: #5c5c5c;
 }
 #scopebtn i{
     color: rgb(0, 0, 255);

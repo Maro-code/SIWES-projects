@@ -41,7 +41,7 @@ attachmentItem.style.display = "none";
 // Listen for file input change
 fileInput.addEventListener('change', function() {
     if (fileInput.files.length > 0) {
-        const file = fileInput.files[0]; // Get the first file
+        const file = fileInput.files[0]; 
         const fileName = file.name;      // Get file name
         const fileSize = (file.size / 1024).toFixed(2); // File size in KB
 
