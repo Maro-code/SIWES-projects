@@ -73,6 +73,7 @@ ul li {
     width: 15rem;
     display: flex; 
     justify-content: center;
+    transition: ease-in-out 0.2s;
 }
 .active{
     background-color: #ADF802;
