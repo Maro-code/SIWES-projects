@@ -1,25 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let options = document.getElementById("options");
-    let option = options.querySelectorAll(".opt"); // Corrected selector
+function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
 
-    option.forEach(opt => {
-        opt.addEventListener("click", () => {
-            option.forEach(o => o.classList.remove("selected"));
-            opt.classList.add("selected");
+        function filterProjects(category) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            const cards = document.querySelectorAll('.card');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = card.dataset.category === category ? 'block' : 'none';
+                }
+            });
+        }
 
-            if (opt.innerHTML === "Design") {
-                document.getElementById("web").style.display = "none";
-                document.getElementById("figma").style.display = "flex";
-            } else if (opt.innerHTML === "Websites") {
-                document.getElementById("web").style.display = "flex";
-                document.getElementById("figma").style.display = "none";
-            } else {
-                document.getElementById("web").style.display = "flex";
-                document.getElementById("figma").style.display = "flex";
-            }
-
-            console.log(opt.innerHTML);
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
-    });
-});
 
