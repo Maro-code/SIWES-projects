@@ -10,96 +10,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0f24fb0455.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <main>
-        <div class="main">
-            <div class="head">
-                <h1>CONTACT</h1>
+<body><nav>
+        <div class="logo">PORTFOLIO</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Get In Touch</h1>
+        <p>Have a project in mind or just want to say hello? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-form">
+            <div class="form-header">
+                <h2>Send a Message</h2>
+                <p>Fill out the form below and I'll respond within 24 hours</p>
             </div>
-            <div class="engolf">
-                <div class="speech">
-                    <h1>Wanna reach out?</h1>
-                    <p>Feel free to contact me for any inquiries or collaborations. I'm always open to discussing new opportunities and ideas!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
                 </div>
-                <div class="container">
-                    <div class="email">
-                        <div class="intro">
-                            <div class="icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="info">
-                                <h2>Email</h2>
-                                <p>For general questions or requests, please reach out via email.</p>
-                            </div>
-                        </div>
-                        <textarea id="message" placeholder="Type your message here" rows="11" cols="10"></textarea>
-                        <button id="submit">Send</button>
-                    </div>
-                    <div class="phone">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="info">
-                            <h2>Phone</h2>
-                            <p>You can also contact me by phone for urgent matters.<br><i>07053335558</i><br>Call me anytime!</p>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
                 </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="status-message" id="statusMessage"></div>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                </div>
+                <p>Prefer email? Send your message directly to:<br>
+                <a href="mailto:timilehin332@gmail.com">timilehin332@gmail.com</a></p>
             </div>
-            <div class="foot">
-                <h1>THANKS FOR YOUR PATIENCE!</h1>
+
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                </div>
+                <p>Available for calls during business hours:<br>
+                <a href="tel:07053335558">07053335558</a></p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Location</h3>
+                </div>
+                <p>Based in Lagos, Nigeria<br>
+                Open to remote opportunities worldwide</p>
             </div>
         </div>
-        <div class="nav">
-            <div id="ham">
-                <button id="hamburger">
-                  <i class="fa-solid fa-bars"></i>
-                </button>
-                <p>Menu</p>
-            </div>
-            <div id="bar">
-                <div class="profile">
-                    <img src="./profile.jpg" alt="profile picture" id="profile">
-                </div>
-                <div id="sidebar">
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-house"></i></div>
-                            <a href="#">Home</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-user"></i></div>
-                            <a href="#">About Me</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-file"></i></i></div>
-                            <a href="#">Resume</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-briefcase"></i></div>
-                            <a href="#">Portfolio</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-address-card"></i></i></div>
-                            <a href="#">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portfolio. Thanks for visiting!</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./contact.js"></script>
     <script src="./sidebar.js"></script>
 </body>
