@@ -10,7 +10,7 @@ const hamburger = document.getElementById('hamburger');
         // ============================================
         
         // Initialize EmailJS with your public key
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+        emailjs.init('S97GQZPLlcIjo0Bu6'); // Replace with your EmailJS public key
         
         const contactForm = document.getElementById('contactForm');
         const statusMessage = document.getElementById('statusMessage');
@@ -26,8 +26,8 @@ const hamburger = document.getElementById('hamburger');
             try {
                 // Send email using EmailJS
                 await emailjs.send(
-                    'YOUR_SERVICE_ID',      // Replace with your EmailJS service ID
-                    'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
+                    'service_cgcoohd',      // Replace with your EmailJS service ID
+                    'template_csxzcad',     // Replace with your EmailJS template ID
                     {
                         from_name: document.getElementById('name').value,
                         from_email: document.getElementById('email').value,
