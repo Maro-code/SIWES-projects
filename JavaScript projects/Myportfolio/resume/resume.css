@@ -12,45 +12,71 @@
             overflow-x: hidden;
         }
 
-        nav {
+                nav {
             position: fixed;
             top: 0;
+            left: 0;
             right: 0;
-            padding: 2rem 4rem;
+            padding: 1.5rem 2rem;
             display: flex;
-            gap: 3rem;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
-            background: rgba(26, 29, 46, 0.8);
-            backdrop-filter: blur(10px);
-            width: 100%;
-            justify-content: flex-end;
         }
 
-        nav a {
-            color: #a5a6b8;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
         }
 
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        nav a.active {
-            color: #ffffff;
-        }
-
-        nav a.active::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
             bottom: -5px;
             left: 0;
-            width: 100%;
+            width: 0;
             height: 2px;
-            background: #6366f1;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         .hamburger {
