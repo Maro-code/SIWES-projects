@@ -1,14 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let button = document.getElementById("btnprimary");
-    let targ = document.getElementById("targ");
-    targ.style.display = "none";
-    button.addEventListener("mouseover",() =>{
-        targ.style.display = "flex";
-    })
-    button.addEventListener("mouseout",() =>{
-        targ.style.display = "none";
-    })
-    button.addEventListener("click",() =>{
-        window.open("https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html");
-    })
-});
+const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
