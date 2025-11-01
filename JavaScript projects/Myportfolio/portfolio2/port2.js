@@ -1,7 +1,16 @@
-function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
         function filterProjects(category) {
             const tabs = document.querySelectorAll('.filter-tab');
             const cards = document.querySelectorAll('.card');
