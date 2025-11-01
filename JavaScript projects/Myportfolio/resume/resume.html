@@ -11,132 +11,104 @@
     <script src="https://kit.fontawesome.com/0f24fb0455.js" crossorigin="anonymous"></script>
 </head>
 <body>
+     <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#">About Me</a>
+            <a href="#" class="active">Resume</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
     <main>
-        <div class="container">
-            <div class="head">
-                <h1>RESUME</h1>
-            </div>
-            <div class="cont">
-                <div class="contents">
-                    <div class="ed">
-                        <h1>EDUCATION</h1>
-                        <div class="education">
-                            <div class="card">
-                                <span class="sub-title">Secondary School</span>
-                                <div class="institution">
-                                    <span class="left">Fit Charis Int’l</span>
-                                    <span class="right">2019-2021</span>
-                                </div>
-                                <div class="writeup">
-                                    <p>During my time at Fit Charis International, I developed a strong foundation in both academic and 
-                                    extracurricular activities. Participating in various clubs such as the math and tech club, 
-                                    which enhanced my critical thinking and teamwork skills. My dedication to my studies earned me recognition 
-                                    as a top student in my class.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <span class="sub-title">University</span>
-                                <div class="institution">
-                                    <span class="left">Covenant University</span>
-                                    <span class="right">2022-2025</span>
-                                </div>
-                                <div class="writeup">
-                                    <p>
-                                        I am currently majoring in Management Information Systems (MIS) at Covenant University. 
-                                        My coursework has provided me with a solid understanding of programming languages, algorithms, 
-                                        and data structures, preparing me for a successful career in technology.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contents">
-                    <div class="ed">
-                        <h1>EXPERIENCE</h1>
-                        <div class="education">
-                            <div class="card">
-                                <span class="sub-title">Internship</span>
-                                <div class="institution">
-                                    <span class="left">A6GNL</span>
-                                    <span class="right">March-August(2024)</span>
-                                </div>
-                                <div class="writeup">
-                                    <p>During my internship at A6GNL, I assisted in project management and client relations, creating websites and
-                                        applying my academic knowledge to real-world scenarios.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <span class="sub-title">University</span>
-                                <div class="institution">
-                                    <span class="left">A6GNL</span>
-                                    <span class="right">2024(1 week)</span>
-                                </div>
-                                <div class="writeup">
-                                    <p>During my stay at A6GNL, I decided to put my design skills to test by taking up a friend's offer to 
-                                       design a blog for a school. Doing this, I was able to gain experience working with a real-life client
-                                       and also learned how to work with a team to meet deadlines.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="page-header">
+            <h1>RESUME</h1>
+            <p>My educational background and professional experience</p>
         </div>
-        <div class="nav">
-            <div id="ham">
-                <button id="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <p>Menu</p>
-            </div>
-            <div id="bar">
-                <div class="profile">
-                    <img src="./profile.jpg" alt="profile picture" id="profile">
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-2">
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-tag">Secondary School</span>
+                            <div class="item-info">
+                                <div class="institution-name">Fit Charis Int'l</div>
+                                <span class="date-badge">2019 - 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-description">
+                        During my time at Fit Charis International, I developed a strong foundation in both academic and 
+                        extracurricular activities. Participating in various clubs such as the math and tech club, 
+                        which enhanced my critical thinking and teamwork skills. My dedication to my studies earned me recognition 
+                        as a top student in my class.
+                    </p>
                 </div>
-                <div id="sidebar">
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-house"></i></div>
-                            <a href="#">Home</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-user"></i></div>
-                            <a href="#">About Me</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-file"></i></div>
-                            <a href="#">Resume</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-briefcase"></i></div>
-                            <a href="#">Portfolio</a>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="content">
-                        <div class="option">
-                            <div class="icon-op"><i class="fa-solid fa-address-card"></i></div>
-                            <a href="#">Contact</a>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-tag">University</span>
+                            <div class="item-info">
+                                <div class="institution-name">Covenant University</div>
+                                <span class="date-badge">2022 - 2025</span>
+                            </div>
                         </div>
                     </div>
+                    <p class="item-description">
+                        I am currently majoring in Management Information Systems (MIS) at Covenant University. 
+                        My coursework has provided me with a solid understanding of programming languages, algorithms, 
+                        and data structures, preparing me for a successful career in technology.
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-    </main>    
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="grid-2">
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-tag">Internship</span>
+                            <div class="item-info">
+                                <div class="institution-name">A6GNL</div>
+                                <span class="date-badge">March - August 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-description">
+                        During my internship at A6GNL, I assisted in project management and client relations, creating websites and
+                        applying my academic knowledge to real-world scenarios.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div>
+                            <span class="item-tag">Project</span>
+                            <div class="item-info">
+                                <div class="institution-name">A6GNL</div>
+                                <span class="date-badge">2024 (1 week)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-description">
+                        During my stay at A6GNL, I decided to put my design skills to test by taking up a friend's offer to 
+                        design a blog for a school. Doing this, I was able to gain experience working with a real-life client
+                        and also learned how to work with a team to meet deadlines.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="./sidebar.js"></script>
 </body>
 </html>
