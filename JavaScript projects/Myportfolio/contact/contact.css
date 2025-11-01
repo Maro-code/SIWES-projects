@@ -305,27 +305,26 @@
                 font-size: 3rem;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed;
-                right: -100%;
-                top: 70px;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
                 flex-direction: column;
-                background: rgba(26, 26, 46, 0.98);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
+                background: rgba(10, 10, 10, 0.98);
                 padding: 2rem;
-                border-top: 1px solid rgba(180, 179, 255, 0.1);
+                gap: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
             .nav-links.active {
-                right: 0;
+                display: flex;
             }
 
-            .hamburger {
-                display: flex;
+            .menu-toggle {
+                display: block;
             }
 
             .hero h1 {
