@@ -300,7 +300,9 @@
             .contact-container {
                 grid-template-columns: 1fr;
             }
-
+            .hero {
+            padding: 3rem 0rem;
+            }
             .hero h1 {
                 font-size: 3rem;
             }
