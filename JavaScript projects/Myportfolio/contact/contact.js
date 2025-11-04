@@ -1,3 +1,16 @@
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+// Keep the link click handlers
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('active');
+    });
+});
+
 const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
