@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,27 @@
     <link href="./contact.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/0f24fb0455.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-   <nav>
+    <nav>
         <div class="logo">CONTACT</div>
         <ul class="nav-links">
-            <li><a href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html">About Me</a></li>
-            <li><a href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html">Resume</a></li>
-            <li><a href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html">Portfolio</a></li>
-            <li><a href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html">Contact</a></li>
+            <li><a href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/home/myport.html">About
+                    Me</a></li>
+            <li><a
+                    href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/resume/resume.html">Resume</a>
+            </li>
+            <li><a
+                    href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/portfolio2/portfolio.html">Portfolio</a>
+            </li>
+            <li><a
+                    href="https://maro-code.github.io/SIWES-projects/JavaScript%20projects/Myportfolio/contact/contact.html">Contact</a>
+            </li>
         </ul>
         <button class="menu-toggle" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
@@ -26,7 +37,8 @@
 
     <section class="hero">
         <h1>Get In Touch</h1>
-        <p>Have a project in mind or just want to say hello? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
+        <p>Have a project in mind or just want to say hello? I'd love to hear from you. Drop me a message and I'll get
+            back to you as soon as possible.</p>
     </section>
 
     <div class="contact-container">
@@ -35,7 +47,18 @@
                 <h2>Send a Message</h2>
                 <p>Fill out the form below and I'll respond within 24 hours</p>
             </div>
-            <form id="contactForm">
+            <form id="contactForm" action="https://formsubmit.co/timilehin332@gmail.com" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Success Page -->
+                <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+                <!-- Form Subject -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <!-- Auto Response -->
+                <input type="hidden" name="_autoresponse"
+                    value="Thank you for your message! I'll get back to you soon.">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -50,7 +73,8 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                    <textarea id="message" name="message" required
+                        placeholder="Tell me about your project..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
                 <div class="status-message" id="statusMessage"></div>
@@ -66,7 +90,8 @@
                     <h3>Email</h3>
                 </div>
                 <p>Prefer email? Send your message directly to:<br>
-                <a href="mailto:timilehin332@gmail.com">timilehin332@gmail.com</a></p>
+                    <a href="mailto:timilehin332@gmail.com">timilehin332@gmail.com</a>
+                </p>
             </div>
 
             <div class="info-card">
@@ -77,7 +102,8 @@
                     <h3>Phone</h3>
                 </div>
                 <p>Available for calls during business hours:<br>
-                <a href="tel:07053335558">07053335558</a></p>
+                    <a href="tel:07053335558">07053335558</a>
+                </p>
             </div>
 
             <div class="info-card">
@@ -88,7 +114,7 @@
                     <h3>Location</h3>
                 </div>
                 <p>Based in Lagos, Nigeria<br>
-                Open to remote opportunities worldwide</p>
+                    Open to remote opportunities worldwide</p>
             </div>
         </div>
     </div>
@@ -96,7 +122,7 @@
     <footer>
         <p>&copy; 2025 Portfolio. Thanks for visiting!</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./contact.js"></script>
 </body>
+
 </html>
