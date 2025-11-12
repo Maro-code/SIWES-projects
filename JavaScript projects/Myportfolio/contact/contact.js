@@ -1,87 +1,82 @@
+// Toggle mobile menu
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
 }
 
-// Keep the link click handlers
+// Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('active');
+        if (navLinks) {
+            navLinks.classList.remove('active');
+        }
     });
 });
 
-const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+// Form handling
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
-
-        // ============================================
-        // FORM SUBMISSION CODE STARTS HERE
-        // ============================================
-        
-        // Initialize EmailJS with your public key
-        emailjs.init('S97GQZPLlcIjo0Bu6'); // Replace with your EmailJS public key
-        
-        const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        // Check if form was submitted (for success/error messages)
+        const urlParams = new URLSearchParams(window.location.search);
         const statusMessage = document.getElementById('statusMessage');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
+        if (urlParams.has('success')) {
+            statusMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+            statusMessage.className = 'status-message success';
+            statusMessage.style.display = 'block';
+
+            // Clear the URL parameters
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (urlParams.has('error')) {
+            statusMessage.textContent = 'There was an error sending your message. Please try again or email me directly.';
+            statusMessage.className = 'status-message error';
+            statusMessage.style.display = 'block';
+
+            // Clear the URL parameters
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Form validation and submission handling
+        contactForm.addEventListener('submit', function (e) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
 
-            try {
-                // Send email using EmailJS
-                await emailjs.send(
-                    'service_cgcoohd',      // Replace with your EmailJS service ID
-                    'template_csxzcad',     // Replace with your EmailJS template ID
-                    {
-                        from_name: document.getElementById('name').value,
-                        from_email: document.getElementById('email').value,
-                        subject: document.getElementById('subject').value,
-                        message: document.getElementById('message').value,
-                        to_email: 'timilehin332@gmail.com'
-                    }
-                );
-
-                // Show success message
-                statusMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
-                statusMessage.className = 'status-message success';
-                statusMessage.style.display = 'block';
-                contactForm.reset();
-                
-            } catch (error) {
-                // Show error message
-                console.error('EmailJS Error:', error);
-                statusMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                e.preventDefault();
+                statusMessage.textContent = 'Please fill in all fields before submitting.';
                 statusMessage.className = 'status-message error';
                 statusMessage.style.display = 'block';
-            } finally {
-                // Reset button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    statusMessage.style.display = 'none';
-                }, 5000);
+                return false;
             }
-        });
-        
-        // ============================================
-        // FORM SUBMISSION CODE ENDS HERE
-        // ============================================
 
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                statusMessage.textContent = 'Please enter a valid email address.';
+                statusMessage.className = 'status-message error';
+                statusMessage.style.display = 'block';
+                return false;
+            }
+
+            // Show sending state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            statusMessage.textContent = 'Sending your message...';
+            statusMessage.className = 'status-message info';
+            statusMessage.style.display = 'block';
+
+            // Form will submit to FormSubmit, which will handle the email sending
+        });
+    }
+});
